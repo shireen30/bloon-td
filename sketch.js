@@ -20,7 +20,7 @@ function draw() {
   
   
  // balloon.x+=2;
-  if(balloon.x>294 ){
+  if(balloon.x>294 && horiztl==true){
     balloon.velocityY=-4;
     //balloon.x=294;
 
@@ -39,11 +39,14 @@ function draw() {
   if(balloon.x>484 && horiztl==true){
     balloon.velocityY=4;
     balloon.velocityX=0;
+    console.log("path10")
+    
 
   }
   if(balloon.y>753 && horiztl==true){
     balloon.velocityY=0;   
     balloon.velocityX=4;
+    console.log("path9")
          
        }
        if(balloon.x>775 && horiztl==true){
@@ -54,25 +57,41 @@ function draw() {
         horiztl=false;
         console.log("hello")
        }
-       if(balloon.y==452 && balloon.x==776){
+       if(balloon.y==452 && balloon.x==776 ){
          balloon.velocityY=-4
          balloon.velocityX=0;
+         console.log("path8")
        }
-       if(balloon.y<230){
+       if(balloon.y<230  && horiztl==false){
          balloon.velocityX=-4;
          balloon.velocityY=0;
+         console.log("path7")
+
        }
        if(balloon.x<295 && horiztl==false){
          balloon.velocityX=0;
          balloon.velocityY=-4
+         console.log("path6")
+         
        }
-       if(balloon.y<96 && balloon.x<300 && horiztl==false){
+       if(balloon.y<96 && horiztl==false){
 
         balloon.velocityX=4;
         balloon.velocityY=0
+        console.log("path5")
+       }
+       if(balloon.x>920 && horiztl==false){
+        console.log("path4")
+         balloon.velocityX=0;
+         balloon.velocityY=4;
+       }
+       if(balloon.y>210  && horiztl==false){
+         console.log("path3")
+         balloon.velocityY=0;
+         balloon.velocityX=4
        }
   
- //console.log("balloon"+balloon.y)
+ console.log("balloon"+balloon.x)
   drawSprites();
 console.log(mouseX,mouseY)
   }
